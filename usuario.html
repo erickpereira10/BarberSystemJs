@@ -1,0 +1,191 @@
+<html>
+	<head>
+    <meta charset="utf-8" />
+		<title>Configurações de Usuário</title>
+    <link rel="stylesheet" href="style_cadastros.css">
+
+		<!-- Bootstrap início -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Bootstrap fim -->
+
+    <!-- Font Awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+    <script src="app.js"></script>
+
+	</head>
+
+  <body>
+
+    <div class="container">
+     
+      <div class="row  mb-2" style="background-color: rgba(255, 0, 0, 0.733)">
+          <div class="col-md-10 mb-2 mt-2">
+          <input type="text" class="form-control" placeholder="Pesquisar Usuário" id="descricao" />
+        </div>
+
+        <div class="col-md-2 d-flex justify-content-end">
+          <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row  mb-2">
+        
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Codigo" id="valor" />
+        </div>
+
+        <div class="col-md-6">
+          <input type="password" class="form-control" placeholder="Usuário" id="descricao" />
+        </div>
+        
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="Senha" id="descricao" /> 
+        </div>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+            <i class="fas fa-eye"></i>
+          </button>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-10">
+          <input type="text" class="form-control" placeholder="Endereço" id="descricao" />
+        </div>
+
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="Número" id="valor" />
+        </div>
+      </div>
+      
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <input type="text" class="form-control" placeholder="Bairro" id="descricao" />
+        </div>
+        <div class="col-md-4">
+          <input type="text" class="form-control" placeholder="Cidade" id="descricao" />
+        </div>
+        <div class="col-md-2 ">
+          <select class="form-control" id="ano">
+            <option value="UF" selected disabled>UF</option>
+            <option value="Acre (AC)">Acre (AC)</option>
+            <option value="Alagoas (AL)">Alagoas (AL)</option>
+            <option value="Amapá (AP)">Amapá (AP)</option>
+            <option value="Amazonas (AM)">Amazonas (AM)</option>
+            <option value="Bahia (BA)">Bahia (BA)</option>
+            <option value="Ceará (CE)">Ceará (CE)</option>
+            <option value="Distrito Federal (DF)">Distrito Federal (DF)</option>
+            <option value="Espírito Santo (ES)">Espírito Santo (ES)</option>
+            <option value="Goiás (GO)">Goiás (GO)</option>
+            <option value="Maranhão (MA)">Maranhão (MA)</option>
+            <option value="Mato Grosso (MT)">Mato Grosso (MT)</option>
+            <option value="Mato Grosso do Sul (MS)">Mato Grosso do Sul (MS)</option>
+            <option value="Minas Gerais (MG)">Minas Gerais (MG)</option>
+            <option value="Pará (PA)">Pará (PA)</option>
+            <option value="Paraíba (PB)">Paraíba (PB)</option>
+            <option value="Paraná (PR)">Paraná (PR)</option>
+            <option value="Pernambuco (PE)">Pernambuco (PE)</option>
+            <option value="Piauí (PI)">Piauí (PI)</option>
+            <option value="Rio de Janeiro (RJ)">Rio de Janeiro (RJ)</option>
+            <option value="Rio Grande do Norte (RN)">Rio Grande do Norte (RN)</option>
+            <option value="Rio Grande do Sul (RS)">Rio Grande do Sul (RS)</option>
+            <option value="Rondônia (RO)">Rondônia (RO)</option>
+            <option value="Roraima (RR)">Roraima (RR)</option>
+            <option value="Santa Catarina (SC)">Santa Catarina (SC)</option>
+            <option value="São Paulo (SP)">São Paulo (SP)</option>
+            <option value="Sergipe (SE)">Sergipe (SE)</option>
+            <option value="Tocantins (TO)">Tocantins (TO)</option>
+          </select>
+        </div>
+
+       
+      </div>
+
+      
+      <div class="row  mb-5">
+        <div class="col-md-2">
+          <input type="text" class="form-control" placeholder="CEP" id="descricao" />
+        </div>
+
+        <div class="col-md-3">
+          <input type="text" class="form-control" placeholder="CPF:  123.456.789-09" id="descricao" />
+        </div>
+
+        <div class="col-md-2 ">
+          <select class="form-control" id="ano">
+            <option value="Tipo" selected disabled>Tipo</option>
+            <option value="Masculino">Admin</option>
+            <option value="Feminino">Usuário</option>
+          </select>
+        </div>
+        <div class="col-md-5">
+          <input type="text" class="form-control" placeholder="E-mail" id="descricao" />
+        </div>
+      </div>
+    
+      <div style="margin-top: -40;">
+        <button type="button" class="btn btn-primary" >
+          <img src="imagens/icones janelas/novo/web_hi_res_512.png" alt="Descrição da imagem">
+          <span>Novo</span>
+        </button>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+          <img src="imagens/icones janelas/alterar/web_hi_res_512.png" alt="Descrição da imagem">
+          <span>Alterar</span>
+        </button>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+          <img src="imagens/icones janelas/excluir/web_hi_res_512.png" alt="Descrição da imagem">
+          <span>Excluir</span>
+        </button>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+          <img src="imagens/icones janelas/gravar/web_hi_res_512.png" alt="Descrição da imagem">
+          <span>Gravar</span>
+        </button>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+          <img src="imagens/icones janelas/limpar/web_hi_res_512.png" alt="Descrição da imagem">
+          <span>Limpar</span>
+        </button>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+          <img src="imagens/icones janelas/excel/128.png" alt="Descrição da imagem">
+          <span>Excel</span>
+        </button>
+        <button type="button" class="btn btn-primary" onclick="pesquisarDespesa()">
+          <img src="imagens/icones janelas/voltar/web_hi_res_512.png" alt="Descrição da imagem">
+          <span>Voltar</span>
+        </button>
+      </div>
+
+
+      <div class="row">
+        <div class="col">
+          <table class="table" >
+            <thead>
+              <tr>
+                <th>Código</th>
+                <th>Usuário</th>
+                <th>Endereço</th>
+                <th>Número</th>
+                <th>Bairro</th>
+                <th>Cidade</th>
+                <th>UF</th>
+                <th>CEP</th>
+                <th>CPF</th>
+                <th>Tipo</th>
+                <th>E-mail</th>
+              </tr>
+            </thead>
+
+            
+               
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>	
+
+</html>
